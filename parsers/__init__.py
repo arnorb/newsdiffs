@@ -10,6 +10,7 @@
 parsers = """
 nyt.NYTParser
 visir.VisirParser
+mbl.MBLParser
 """.split()
 
 parser_dict = {}
