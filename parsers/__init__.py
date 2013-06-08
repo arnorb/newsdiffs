@@ -9,9 +9,6 @@
 
 parsers = """
 nyt.NYTParser
-cnn.CNNParser
-politico.PoliticoParser
-bbc.BBCParser
 visir.VisirParser
 """.split()
 

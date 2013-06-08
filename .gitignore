@@ -33,3 +33,11 @@ newsdiffs.db
 database_settings.py
 
 .DS_Store
+
+*.sublime-project
+
+newsdiffs.sublime-workspace
+
+.DS_Store
+
+.DS_Store
