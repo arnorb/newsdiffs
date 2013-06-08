@@ -6,7 +6,8 @@ class MBLParser(BaseParser):
     domains = ['www.mbl.is']
 
     feeder_base = 'http://www.mbl.is/frettir/'
-    feeder_pat = '^http://www.mbl.is/frettir/.*/\d{4}/\d{2}/\d{2}/.*'
+    newscategories = ["frettir", "vidskipti", "sport", "folk", "smartland", "monitor"]
+    feeder_pat = '^http://www.mbl.is/(' + '|'.join(newscategories) + ')/.*/\d{4}/\d{2}/\d{2}/.*'
 
     def _parse(self, html):
         soup = BeautifulSoup(html, convertEntities=BeautifulSoup.HTML_ENTITIES,
