@@ -29,16 +29,19 @@ class VisirParser(BaseParser):
         allp = moresoup.findAll('p')
 
 
-        bymeta = str(soup.find('div', 'meta'))
+        bymeta = str(moresoup.find('div', 'meta'))
         by = bymeta.replace(' skrifar:', '')
-        newby = BeautifulSoup(by)
+        if by is None:
+            self.byline = ''
+        else:
+            newby = BeautifulSoup(by)
+            self.byline = newby.getText()
+        
+        self.date = soup.find('div', 'authors').find('span', 'date').getText()
 
-        self.byline = newby.getText()
-        
-        
-        
-        
-        # print moresoup
+        if self.date is None:
+            self.real_article = False
+            return
 
-        self.date = soup.find('div', 'article').find('span', 'date').getText()
-        self.body = '\n'+'\n\n'.join([x.getText() for x in allp])
+        self.body = '\n'+'\n\n'.join([x.getText() for x in allp
+                                              if isinstance(x, Tag) and x.name == 'p'])

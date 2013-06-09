@@ -8,7 +8,6 @@
 # List of parsers to import and use based on parser.domains
 
 parsers = """
-nyt.NYTParser
 visir.VisirParser
 mbl.MBLParser
 """.split()
