@@ -1,5 +1,6 @@
 from baseparser import BaseParser
 from BeautifulSoup import BeautifulSoup, Tag
+import re
 
 
 class MBLParser(BaseParser):
@@ -25,7 +26,7 @@ class MBLParser(BaseParser):
         else:
             self.byline = byline.find('a', 'name').getText()
 
-        self.date = soup.find('div', 'dateline').getText().split("|")[2]
+        self.date = unicode(soup.find('div', 'dateline').find(text=re.compile('\d{1,2}\.\d{1,2}\.\d{4}')))
 
         div = soup.find('div', 'frett-main')
         if div is None:
