@@ -28,13 +28,14 @@ class VisirParser(BaseParser):
         moresoup = BeautifulSoup(tmp2)
         allp = moresoup.findAll('p')
 
-
-        byline = str(moresoup.find('div', 'meta'))
+        
+        byline = moresoup.find('div', 'meta')
 
         if byline is None:
             self.byline = ''
         else:
-            by = byline.replace(' skrifar:', '')
+
+            by = str(byline).replace(' skrifar:', '')
             newby = BeautifulSoup(by)
             self.byline = newby.getText()
         
