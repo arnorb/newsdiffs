@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from baseparser import BaseParser
 from BeautifulSoup import BeautifulSoup, Tag
 
