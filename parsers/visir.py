@@ -11,7 +11,7 @@ class VisirParser(BaseParser):
 
     def _parse(self, html):
         soup = BeautifulSoup(html, convertEntities=BeautifulSoup.HTML_ENTITIES,
-                             fromEncoding='utf-8')
+                             fromEncoding='8859')
         
         elt = soup.find('h1')
         if elt is None:
@@ -30,7 +30,7 @@ class VisirParser(BaseParser):
         allp = moresoup.findAll('p')
 
         
-        byline = moresoup.find('div', 'meta')
+        byline = soup.find('div', 'meta')
 
         if byline is None:
             self.byline = ''
@@ -38,7 +38,7 @@ class VisirParser(BaseParser):
             by = byline.getText()
             self.byline = by.replace(' skrifar:', '')
         # else:
-            # by = str(byline).replace(' skrifar:', '')
+            # by = str(byline)
             # newby = BeautifulSoup(by.encode('utf-8'))
             # self.byline = newby.getText()
         
