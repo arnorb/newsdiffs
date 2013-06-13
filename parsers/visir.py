@@ -36,7 +36,7 @@ class VisirParser(BaseParser):
         else:
             by = str(byline).replace(' skrifar:', '')
             newby = BeautifulSoup(by)
-            self.byline = unicode(newby.getText())
+            self.byline = newby.getText()
         
         self.date = soup.find('div', 'authors').find('span', 'date').getText()
 
