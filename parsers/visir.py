@@ -35,9 +35,12 @@ class VisirParser(BaseParser):
         if byline is None:
             self.byline = ''
         else:
-            by = str(byline).replace(' skrifar:', '')
-            newby = BeautifulSoup(by)
-            self.byline = newby.getText().encode('utf-8')
+            by = byline.getText()
+            self.byline = by.replace(' skrifar:', '')
+        # else:
+            # by = str(byline).replace(' skrifar:', '')
+            # newby = BeautifulSoup(by.encode('utf-8'))
+            # self.byline = newby.getText()
         
         self.date = soup.find('div', 'authors').find('span', 'date').getText()
 
