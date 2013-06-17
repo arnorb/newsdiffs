@@ -10,6 +10,7 @@
 parsers = """
 visir.VisirParser
 mbl.MBLParser
+ruv.RUVParser
 """.split()
 
 parser_dict = {}

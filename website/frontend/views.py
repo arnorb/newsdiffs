@@ -95,7 +95,7 @@ def get_articles(source=None, distance=0):
     return articles
 
 
-SOURCES = 'visir.is mbl.is'.split() + ['']
+SOURCES = 'visir.is mbl.is ruv.is'.split() + ['']
 
 @cache_page(60 * 30)  #30 minute cache
 def browse(request, source=''):
