@@ -4,10 +4,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>NewsDiffs | {% block title %}Tracking Online News Articles Over Time{% endblock %}</title>
+    <title>Fréttasaga | {% block title %}Breytingaskrá frétta á íslenskum fjölmiðlum{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NewsDiffs tracks changes in online news articles over time">
-    <meta name="author" content="Eric Price, Greg Price, Jennifer 8. Lee">
+    <meta name="description" content="Fréttaskrá birtir breytingaskrá frétta á nokkrum íslenskum fjölmiðlum">
+    <meta name="author" content="Arnór Bogason, Karl Tryggvason">
 
     <!-- Le styles -->
 
@@ -66,16 +66,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="{% url 'root' %}">NewsDiffs</a>
+          <a class="brand" href="{% url 'root' %}">Fréttasaga</a>
           <!--<div class="nav-collapse">-->
             <ul class="nav">
-              <li {% block active_front %}{% endblock %}><a href="{% url 'root' %}">Home</a></li>
-              <li {% block active_about %}{% endblock %}><a href="{% url 'about' %}">About</a></li>
-              <li {% block active_browse %}{% endblock %}><a href="{% url 'browse' %}">Browse</a></li>
-              <li {% block active_examples %}{% endblock %}><a href="{% url 'examples' %}">Highlights</a></li>
+              <li {% block active_front %}{% endblock %}><a href="{% url 'root' %}">Heim</a></li>
+              <li {% block active_about %}{% endblock %}><a href="{% url 'about' %}">Um</a></li>
+              <li {% block active_browse %}{% endblock %}><a href="{% url 'browse' %}">Skoða</a></li>
+              <!--<li {% block active_examples %}{% endblock %}><a href="{% url 'examples' %}">Highlights</a></li>
               <li {% block active_press %}{% endblock %}><a href="{% url 'press' %}">Press</a></li>
               <li {% block active_subscribe %}{% endblock %}><a href="{% url 'subscribe' %}">Subscribe</a></li>
-              <li {% block active_contact %}{% endblock %}><a href="{% url 'contact' %}">Contact</a></li>
+              <li {% block active_contact %}{% endblock %}><a href="{% url 'contact' %}">Contact</a></li>-->
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -88,7 +88,7 @@
 <hr>
  {% block footer %} 
 	<footer>
-        <p>&copy; <a href="{% url 'contact' %}">NewsDiffs</a> 2012 | <a href="http://twitter.com/newsdiffs">@newsdiffs</a> | <a href="{% url 'subscribe' %}">Subscribe</a> </p>
+        <p>&copy; <a href="{% url 'contact' %}">Fréttasaga</a> 2013 <!-- | <a href="http://twitter.com/newsdiffs">@newsdiffs</a> | <a href="{% url 'subscribe' %}">Subscribe</a> --></p>
         </footer>
 {% endblock footer %}
     </div>
